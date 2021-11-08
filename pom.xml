@@ -94,7 +94,7 @@
                 <snapshotRepository>
                    <id>nexus</id>
                    <name>J-Babi Release Nexus Repository</name>
-                   <url>http://18.218.162.52:8083/repository/spring-javaweb-app-mongo-release/</url>
+                   <url>http://18.218.162.52:8083/repository/spring-javaweb-app-mongo-snapshot/</url>
                 </snapshotRepository>
 			
         </distributionManagement>
