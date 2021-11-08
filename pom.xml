@@ -97,7 +97,7 @@
                    <url>http://18.218.162.52:8083/repository/spring-javaweb-app-mongo-release/</url>
                 </snapshotRepository>
 			
-        <distributionManagement>
+        </distributionManagement>
 
 	<build>
 		<plugins>
