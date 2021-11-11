@@ -90,16 +90,16 @@
 	
 	<distributionManagement>
 		
-                <repository>
+                <SnanshotRepository>
                    <id>nexus</id>
                    <name>J-Babi Snapshot Nexus Repository</name>
                    <url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-snapshot/</url>
-                </repository>
-                <snapshotRepository>
+                </SnanshotRepository>
+                <releaseRepository>
                    <id>nexus</id>
                    <name>J-Babi Release Nexus Repository</name>
                    <url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-release/</url>
-                </snapshotRepository>
+                </releaseRepository>
 			
         </distributionManagement>
 
