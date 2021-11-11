@@ -90,7 +90,7 @@
 	
 	<distributionManagement>
 		
-                <snanshotRepository>
+		<snapshotRepository>
                    <id>nexus</id>
                    <name>J-Babi snapshot Nexus Repository</name>
                    <url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-snapshot/</url>
