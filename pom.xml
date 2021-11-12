@@ -91,20 +91,22 @@
 	
 	<distributionManagement>
 		
-        <releaseRepository>
-		<id>nexus</id>
-		<name>J-Babi Release Nexus Repository</name>
-		<url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-release/</url>
-        </releaseRepository>
-	<snapshotRepository>
-		<id>nexus</id>
-		<name>J-Babi snapshot Nexus Repository</name>
-		<url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-snapshot/</url>
-        </snapshotRepository>
+            <repository>
+	      <id>nexus</id>
+	      <name>J-Babi Release Nexus Repository</name>
+	      <url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-release/</url>
+            </repository>
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>J-Babi snapshot Nexus Repository</name>
+	      <url>http://18.222.229.255:8083/repository/spring-javaweb-app-mongo-snapshot/</url>
+            </snapshotRepository>
 			
         </distributionManagement>
 
 	<build>
+		<finalName>spring-javaweb-app-mongo</finalName>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
