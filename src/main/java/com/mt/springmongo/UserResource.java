@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Rest controller which is responsible for retrieving {@link User}s.
- *
- * @author Mithun
  */
 @RestController
 @RequestMapping(value = "/api/users")
