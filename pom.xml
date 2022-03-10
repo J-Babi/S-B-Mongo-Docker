@@ -91,11 +91,11 @@
 	
 	<distributionManagement>
 		
-          /*  <repository>
+            <repository>
 	      <id>deployment</id>
 	      <name>J-Babi Release Nexus Repository</name>
 	      <url>http://3.17.146.138:8081/repository/SBM-release/</url>
-            </repository> */
+            </repository> 
 	    <snapshotRepository>
 	      <id>deployment</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
