@@ -11,7 +11,7 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mt</groupId>
-	<artifactId>spring-javawebapp-mongo</artifactId>
+	<artifactId>spring-boot-mongo</artifactId>
 	<version>1.0.0-snapshot</version>
 	<packaging>war</packaging>
 	<properties>
@@ -105,7 +105,7 @@
         </distributionManagement>
 
 	<build>
-		<finalName>spring-javaweb-app-mongo</finalName>
+		<finalName>spring-boot-mongo</finalName>
 		
 		<plugins>
 			<plugin>
