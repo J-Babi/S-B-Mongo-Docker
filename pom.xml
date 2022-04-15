@@ -22,7 +22,7 @@
 		
 		<sonar.host.url>http://localhost:9000/</sonar.host.url>
 		<sonar.login>0229fa0104f2029617a55b100b72b9de42942bb8</sonar.login>
-		<!-- <sonar.password>admin123</sonar.password> --!>
+		<!-- <sonar.password>admin123</sonar.password> -->
 	</properties>
 
 	<dependencyManagement>
