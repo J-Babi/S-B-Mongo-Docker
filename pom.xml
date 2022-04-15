@@ -94,12 +94,12 @@
             <repository>
 	      <id>deployment</id>
 	      <name>J-Babi Release Nexus Repository</name>
-	      <url>http://13.59.108.17:8081/repository/SBM-release/</url>
+	      <url>http://localhost:8081/repository/maven-releases/</url>
             </repository> 
 	    <snapshotRepository>
 	      <id>deployment</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
-	      <url>http://13.59.108.17:8081/repository/SBM-snapshot/</url>
+	      <url>http://localhost:8081/repository/maven-snapshots/</url>
             </snapshotRepository>
 			
         </distributionManagement>
