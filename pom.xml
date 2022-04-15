@@ -20,9 +20,9 @@
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
 		
-		<sonar.host.url>https://127.0.0.1:9000/</sonar.host.url>
+		<sonar.host.url>http://localhost:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>ead00a23d1c09d730b746f35c58dded1d4b9f21f</sonar.password>
+		<sonar.password>admin123</sonar.password>
 	</properties>
 
 	<dependencyManagement>
