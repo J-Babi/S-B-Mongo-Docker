@@ -11,7 +11,7 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mt</groupId>
-	<artifactId>spring-javawebapp-mongo</artifactId>
+	<artifactId>spring-boot-mongo</artifactId>
 	<version>1.0.0-snapshot</version>
 	<packaging>war</packaging>
 	<properties>
@@ -21,8 +21,8 @@
 		<logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
 		
 		<sonar.host.url>http://localhost:9001/</sonar.host.url>
-		<sonar.login>admin321</sonar.login>
-		<!-- <sonar.password>admin123</sonar.password> -->
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin321</sonar.password> 
 	</properties>
 
 	<dependencyManagement>
@@ -92,12 +92,12 @@
 	<distributionManagement>
 		
             <repository>
-	      <id>nexus</id>
+	      <id>deployment</id>
 	      <name>J-Babi Release Nexus Repository</name>
 	      <url>http://localhost:8081/repository/maven-releases/</url>
-            </repository>
+            </repository> 
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>deployment</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
 	      <url>http://localhost:8081/repository/maven-snapshots/</url>
             </snapshotRepository>
@@ -105,7 +105,7 @@
         </distributionManagement>
 
 	<build>
-		<finalName>spring-javaweb-app-mongo</finalName>
+		<finalName>spring-boot-mongo</finalName>
 		
 		<plugins>
 			<plugin>
