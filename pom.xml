@@ -92,14 +92,14 @@
 	<distributionManagement>
 		
             <repository>
-	      <id>deployment</id>
+	      <id>nexus</id>
 	      <name>J-Babi Release Nexus Repository</name>
-	      <url>http://172.17.0.3:8081/repository/sbm1-release/</url>
+	      <url>http://localhost:8081/repository/sbm1-release/</url>
             </repository> 
 	    <snapshotRepository>
-	      <id>deployment</id>
+	      <id>nexus</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
-	      <url>http://172.17.0.3:8081/repository/sbm1-snapshot/</url>
+	      <url>http://localhost:8081/repository/sbm1-snapshot/</url>
             </snapshotRepository>
 			
         </distributionManagement>
