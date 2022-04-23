@@ -20,7 +20,7 @@
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
 		
-		<sonar.host.url>http://172.24.166.211:9000/</sonar.host.url>
+		<sonar.host.url>http://172.31.141.223:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin321</sonar.password> 
 	</properties>
@@ -94,12 +94,12 @@
             <repository>
 	      <id>nexus</id>
 	      <name>J-Babi Release Nexus Repository</name>
-	      <url>http://172.24.160.1:8081/repository/sbm1-snapshots/</url>
+	      <url>http://172.31.128.1:8081/repository/sbm1-snapshots/</url>
             </repository> 
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
-	      <url>http://172.24.160.1:8081/repository/sbm1-snapshots/</url>
+	      <url>http://172.31.128.1:8081/repository/sbm1-snapshots/</url>
             </snapshotRepository>
 			
         </distributionManagement>
