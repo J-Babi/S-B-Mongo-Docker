@@ -97,7 +97,7 @@
 	      <url><server>
                 <id>nexus</id>
                 <username>admin</username>
-                <password>admin123</password>
+                <password>Bila2671</password>
             </server>http://18.216.183.136:8081/repository/sbm-release/</url>
             </repository> 
 	    <snapshotRepository>
