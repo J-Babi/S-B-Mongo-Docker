@@ -99,7 +99,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>J-Babi Snapshot Nexus Repository</name>
-	      <url>http://18.191.58.1:8081/repository/sbm2-snapshot/</url>
+	      <url>http://18.191.58.1:8081/repository/sbm3-snapshot/</url>
             </snapshotRepository>
 			
         </distributionManagement>
