@@ -1,12 +1,12 @@
 trigger:
 - main
 
-strategy:
-  matrix:
-    linux:
-      operatingSystem: ubuntu-latest
-    windows: 
-      operatingSystem: windows-latest
+# strategy:
+#   matrix:
+#     linux:
+#       operatingSystem: ubuntu-latest
+#     windows: 
+#       operatingSystem: windows-latest
 
 pool:
   vmImage: ubuntu-latest
