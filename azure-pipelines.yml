@@ -11,12 +11,12 @@ strategy:
 pool:
   vmImage: ubuntu-latest
 
-  stages: 
-  - stage: Build
-    jobs:
-    - job: BuildJob
-      steps:
-      - bash: echo "Doing the build"
+  # stages: 
+  # - stage: Build
+  #   jobs:
+  #   - job: BuildJob
+  #     steps:
+  #     - bash: echo "Doing the build"
 
 - stage: DevDeploy
   dependsOn: Build
