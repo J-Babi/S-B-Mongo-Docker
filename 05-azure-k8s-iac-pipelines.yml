@@ -22,7 +22,7 @@ steps:
     backendAzureRmSubscriptionId: 'c10f1517-7337-4593-9206-7eaeb24429b3'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'Terraform-backend-rg'
-    backendAzureRmResourceGroupLocation: 'eastus'
+    backendAzureRmResourceGroupLocation: 'can-central'
     backendAzureRmStorageAccountName: 'TerraformBackEndStorage1'
     backendAzureRmContainerName: 'terrafbackendstorage1container'
     backendAzureRmKey: 'K8s-dev.tfstate'
