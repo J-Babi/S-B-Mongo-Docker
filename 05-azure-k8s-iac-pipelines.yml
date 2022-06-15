@@ -23,7 +23,7 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'Terraform-rg-backend'
     backendAzureRmResourceGroupLocation: 'eastus'
-    backendAzureRmStorageAccountName: 'JulTerraformBackE'
-    backendAzureRmContainerName: 'JulTerraformBackEcontainer'
+    backendAzureRmStorageAccountName: 'JulTerraformBackEndStorage'
+    backendAzureRmContainerName: 'JulTerraformBackEndStoragecontainer'
     backendAzureRmKey: 'K8s-dev.tfstate'
     allowTelemetryCollection: true
