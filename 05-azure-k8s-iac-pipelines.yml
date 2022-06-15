@@ -18,7 +18,7 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
     backendType: 'azurerm'
-    backendServiceArm: 'azure-resource-manager-connection'
+    backendServiceArm: 'Pay-as-you-go(fbda5f5f-c0fc-4c08-bb7b-a82c3f743227)'
     backendAzureRmSubscriptionId: 'fbda5f5f-c0fc-4c08-bb7b-a82c3f743227'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'Terraform-rg-backend'
