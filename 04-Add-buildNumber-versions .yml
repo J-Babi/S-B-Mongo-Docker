@@ -1,0 +1,81 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: Build
+  jobs:
+  - job: FirstJob
+    steps:
+    - bash: echo "building 1st Job"
+    - bash: echo $(PipelineLevelVariable)
+    - bash: echo $(Build.BuildNumber)
+    - bash: echo $(Build.BuildId)
+    - bash: echo $(Build.SourceBranchName)
+    - bash: echo $(Build.SourcesDirectory)
+    - bash: ls -la -R $(System.DefaultWorkingDirectory)
+    - bash: echo $(Build.ArtifactStagingDirectory)
+    - bash: java -version
+    - bash: node --version
+    - bash: python --version
+    - bash: mvn -version 
+    - bash: ls -la -R $(System.DefaultWorkingDirectory)
+
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(System.DefaultWorkingDirectory)'
+        Contents: '**/*.yml'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - bash: ls -la -R '$(Build.ArtifactStagingDirectory)'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+
+  # - job: SecondJob
+  #   steps:
+  #   - bash: echo "building 2nd Job"
+  
+#   # Adding dependencies between deploy stages
+  
+# - stage: DevDeploy
+#   variables: # Added after deploy stage dependencies
+#     environment: Dev
+#   dependsOn: 
+#   - Build
+#   jobs:
+#   - job: DevDeployJob
+#     steps:
+#     - bash: echo "$(PipelineLevelVariable)DevDeployJob"  
+  
+# - stage: QADeploy
+#   variables: # Added after deploy stage dependencies
+#     environment: QA
+#   dependsOn: 
+#   - Build
+#   jobs:
+#   - job: QADeployJob
+#     steps:
+#     - bash: echo "$(PipelineLevelVariable)QADeployJob" 
+
+# - stage: ProdDeploy 
+#   variables: # Added after deploy stage dependencies
+#     environment: Prod
+#   dependsOn: 
+#   - DevDeploy
+#   - QADeploy
+#   jobs:
+#   - job: ProdDeployJob
+#     steps:
+#     - bash: echo "$(PipelineLevelVariable)ProdDeployJob"  
+
+
