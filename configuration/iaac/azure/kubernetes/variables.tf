@@ -7,7 +7,7 @@ variable environment {
 }
 
 variable location {
-    default = "can-central"
+    default = "cac"
 }
 
 variable node_count {
