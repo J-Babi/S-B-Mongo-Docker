@@ -33,6 +33,7 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
+    allowTelemetryCollection: true
     # backendType: 'azurerm'
     # backendServiceArm: 'azure-resource-manager-connection'
     # backendAzureRmSubscriptionId: 'c10f1517-7337-4593-9206-7eaeb24429b3'
@@ -41,12 +42,5 @@ steps:
     # backendAzureRmResourceGroupLocation: 'eastus'
     # backendAzureRmStorageAccountName: 'terrafbackendstorage1'
     # backendAzureRmContainerName: 'terrafbackendstorage1container'
-    # backendAzureRmKey: 'K8s-dev.tfstate'
-- task: TerraformCLI@0
-  inputs:
-    command: 'apply'
-    environmentServiceName: 'azure-resource-manager-connection'
-    providerAzureRmSubscriptionId: 'c10f1517-7337-4593-9206-7eaeb24429b3'
-    runAzLogin: true
-    allowTelemetryCollection: true
-    providerGoogleRegion: 'eastus'
+    # backendAzureRmKey: 'K8s-dev.tfstate'- task: TerraformCLI@0
+
