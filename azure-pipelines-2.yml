@@ -18,7 +18,3 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: TerraformInstaller@0
-  inputs:
-    terraformVersion: 'latest'
-    downloadUrl: 'https://releases.hashicorp.com/terraform/1.2.3/terraform_1.2.3_linux_amd64.zip'
