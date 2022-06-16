@@ -27,3 +27,10 @@ steps:
     backendAzureRmContainerName: 'terrafbackendstorage1container'
     backendAzureRmKey: 'K8s-dev.tfstate'
     allowTelemetryCollection: false
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'validate'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
+    allowTelemetryCollection: false
