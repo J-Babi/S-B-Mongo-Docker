@@ -13,6 +13,7 @@ steps:
     secureFile: 'id_rsa.pub'
 
 - task: TerraformInstaller@0
+  name: update
   inputs:
     terraformVersion: 'latest'
 
