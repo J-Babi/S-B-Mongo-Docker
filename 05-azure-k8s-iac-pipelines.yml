@@ -7,12 +7,11 @@ pool:
 steps:
 - script: echo azure-k8s-with-Terraform!
   displayName: 'Run a one-line script'
+
 - task: DownloadSecureFile@1
   name: publickey
   inputs:
     secureFile: 'id_rsa.pub'
-
-
 
 - task: TerraformCLI@0
   inputs:
