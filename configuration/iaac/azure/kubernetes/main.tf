@@ -7,24 +7,24 @@ terraform {
   }
 }
 
-provider "azurerm" {
-  features {}
-  subscription_id = "c10f1517-7337-4593-9206-7eaeb24429b3"
-  client_id       = "c7359531-bb4c-4f34-9553-fd8c57a180e8"
+# provider "azurerm" {
+#   features {}
+#   subscription_id = "c10f1517-7337-4593-9206-7eaeb24429b3"
+#   client_id       = "c7359531-bb4c-4f34-9553-fd8c57a180e8"
 #   client_secret   = var.client_secret
-  tenant_id       = "56297af4-f8d2-4ea6-b09d-fda2ed13cc19"
-}
+#   tenant_id       = "56297af4-f8d2-4ea6-b09d-fda2ed13cc19"
+# }
 
-data "azurerm_role_definition" "contributor" {
-  name = "Contributor"
-}
+# data "azurerm_role_definition" "contributor" {
+#   name = "Contributor"
+# }
 
-resource "azurerm_role_assignment" "resource_group" {
+# resource "azurerm_role_assignment" "resource_group" {
 #   name               = azurerm_virtual_machine.example.name
-  scope              = data.azurerm_subscription.primary.id
-  role_definition_id = "${data.azurerm_subscription.subscription.id}${data.azurerm_role_definition.contributor.id}"
-  principal_id       = azurerm_virtual_machine.example.identity[0]["principal_id"]
-}
+#   scope              = data.azurerm_subscription.primary.id
+#   role_definition_id = "${data.azurerm_subscription.subscription.id}${data.azurerm_role_definition.contributor.id}"
+#   principal_id       = azurerm_virtual_machine.example.identity[0]["principal_id"]
+# }
 
 resource "azurerm_resource_group" "resource_group" {
   name     = "${var.resource_group}_${var.environment}"
