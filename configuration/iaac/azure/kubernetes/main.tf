@@ -19,6 +19,13 @@ data "azurerm_role_definition" "contributor" {
   name = "Contributor"
 }
 
+resource "azurerm_role_assignment" "resource_group" {
+#   name               = azurerm_virtual_machine.example.name
+  scope              = data.azurerm_subscription.primary.id
+  role_definition_id = "${data.azurerm_subscription.subscription.id}${data.azurerm_role_definition.contributor.id}"
+  principal_id       = azurerm_virtual_machine.example.identity[0]["principal_id"]
+}
+
 resource "azurerm_resource_group" "resource_group" {
   name     = "${var.resource_group}_${var.environment}"
   location = var.location
