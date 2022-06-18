@@ -37,8 +37,13 @@ stages:
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/*yaml'
-        Contents: '**/*war'
         TargetFolder: '$(Build.ArtifactMainDirectory'
+
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '''$(System.DefaultWorkingDirectory)'''
+        Contents: '**/*war'
+        TargetFolder: '''$(Build.ArtifactMainDirectory'''
 
     - task: PublishBuildArtifacts@1
       inputs:
