@@ -12,9 +12,9 @@ steps:
   name: publickey
   inputs:
     secureFile: 'id_rsa.pub'
-- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
-  inputs:
-    terraformVersion: 'latest'
+# - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
+#   inputs:
+#     terraformVersion: 'latest'
 
 - task: TerraformCLI@0
   inputs:
