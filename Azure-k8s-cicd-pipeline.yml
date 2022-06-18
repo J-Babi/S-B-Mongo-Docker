@@ -37,6 +37,7 @@ stages:
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/*yaml'
+        Contents: '**/*war'
         TargetFolder: '$(Build.ArtifactMainDirectory'
 
     - task: PublishBuildArtifacts@1
