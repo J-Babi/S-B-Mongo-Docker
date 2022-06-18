@@ -16,6 +16,10 @@ terraform {
 #   tenant_id       = "56297af4-f8d2-4ea6-b09d-fda2ed13cc19"
 }
 
+data "azurerm_role_definition" "contributor" {
+  name = "Contributor"
+}
+
 resource "azurerm_resource_group" "resource_group" {
   name     = "${var.resource_group}_${var.environment}"
   location = var.location
