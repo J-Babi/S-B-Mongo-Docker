@@ -20,7 +20,7 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
-resource "azurerm_kubernetes_cluster" "AKS_dev" {
+resource "azurerm_kubernetes_cluster" "k8s_dev" {
   name                = "${var.cluster_name}_${var.environment}"
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
