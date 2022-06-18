@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: springappcontainer
-          image: mylandmarktech/sping-boot-mongo
+          image: jbabi/sbm:194 # mylandmarktech/sping-boot-mongo
           ports:
           - containerPort: 8080
           env:
