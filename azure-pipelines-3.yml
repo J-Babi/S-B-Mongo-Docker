@@ -15,6 +15,25 @@ steps:
 - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
   inputs:
     terraformVersion: 'latest'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'azure-resource-manager-connection'
+    scriptType: 'batch'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      - task: AzureCLI@2
+              displayName: "Terraform"
+              inputs:
+                azureSubscription:  shared-${{ parameters.environment }}-001
+                scriptType: bash
+                addSpnToEnvironment: true
+                scriptLocation: inlineScript
+                inlineScript: |
+                  export ARM_CLIENT_ID=$servicePrincipalId
+                  export ARM_CLIENT_SECRET=$servicePrincipalKey
+                  export ARM_TENANT_ID=$tenantId
+
 - task: TerraformCLI@0
   inputs:
     command: 'init'
