@@ -18,8 +18,8 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'azure-resource-manager-connection'
-    scriptType: 'batch'
+    azureSubscription: 'Azure subscription 1(c10f1517-7337-4593-9206-7eaeb24429b3)'
+    scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
       - task: AzureCLI@2
