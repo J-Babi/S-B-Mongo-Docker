@@ -37,11 +37,11 @@ stages:
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/*yaml'
-        TargetFolder: '$(Build.ArtifactStagingDirectory'
+        TargetFolder: '$(Build.ArtifactMainDirectory'
 
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        PathtoPublish: '$(Build.ArtifactMainDirectory)'
         ArtifactName: 'springbootmongo'
         publishLocation: 'Container'
 
