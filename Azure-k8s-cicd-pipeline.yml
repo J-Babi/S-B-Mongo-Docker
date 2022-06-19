@@ -37,17 +37,17 @@ stages:
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/springBootMongo2.yaml'
-        TargetFolder: '$(Build.ArtifactMainDirectory)'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/*war'
-        TargetFolder: '$(Build.ArtifactMainDirectory)'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactMainDirectory)'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'springbootmongo'
         publishLocation: 'Container'
 
@@ -71,5 +71,5 @@ stages:
         action: 'deploy'
         kubernetesServiceConnection: 'Azure-kubernetes-connection'
         namespace: 'default'
-        manifests: '$(System.ArtifactsDirectory)/springBootMongo.yml'
+        manifests: '$(System.ArtifactsDirectory)/springBootMongo2.yaml'
         containers: 'jbabi/sbm:$(tag)'
