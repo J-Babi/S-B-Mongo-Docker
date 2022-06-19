@@ -42,13 +42,13 @@ stages:
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
-        Contents: '**/sbm'
+        Contents: '**/*.war'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'azure-sbm'
+        ArtifactName: 'app'
         publishLocation: 'Container'
 
 - stage: Deploy
@@ -62,8 +62,8 @@ stages:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'azure-sbm'
-        itemPattern: '**/*yml'
+        artifactName: 'app'
+        itemPattern: '**/*.war'
         targetPath: '$(System.ArtifactsDirectory)'
 
     - task: KubernetesManifest@0
