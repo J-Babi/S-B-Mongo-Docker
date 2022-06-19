@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: springappcontainer
-          image: jbabi/azure-sbm:194 # mylandmarktech/sping-boot-mongo
+          image: jbabi.azurecr.io/springbootmongo:486 # mylandmarktech/sping-boot-mongo
           ports:
           - containerPort: 8080
           env:
@@ -64,30 +64,30 @@ spec:
     - port: 80
       targetPort: 8080
   type: LoadBalancer
----
-apiVersion: extensions/v1
-kind: Ingress
-metadata:
-  name: ingress-resource-1
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: DNSname (eg. tekglobal.io)
-    secretName: mylandmarktech-ingress-tls
-    http:
-      paths:
-      # Default Path(/)
-      - backend:
-          serviceName: springapp
-          servicePort: 80
-      - path: /app
-        backend:
-          serviceName: myappsvc
-          servicePort: 80
-      - path: /java-web-app
-        backend:
-          serviceName: javawebapp
-          servicePort: 80
+# ---
+# apiVersion: extensions/v1
+# kind: Ingress
+# metadata:
+#   name: ingress-resource-1
+# spec:
+#   ingressClassName: nginx
+#   rules:
+#   - host: DNSname (eg. tekglobal.io)
+#     secretName: mylandmarktech-ingress-tls
+#     http:
+#       paths:
+#       # Default Path(/)
+#       - backend:
+#           serviceName: springapp
+#           servicePort: 80
+#       - path: /app
+#         backend:
+#           serviceName: myappsvc
+#           servicePort: 80
+#       - path: /java-web-app
+#         backend:
+#           serviceName: javawebapp
+#           servicePort: 80
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
