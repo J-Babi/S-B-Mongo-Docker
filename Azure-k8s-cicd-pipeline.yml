@@ -48,7 +48,7 @@ stages:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'sbm'
+        ArtifactName: 'azure-sbm'
         publishLocation: 'Container'
 
 - stage: Deploy
@@ -62,7 +62,7 @@ stages:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'sbm'
+        artifactName: 'azure-sbm'
         itemPattern: '**/*yml'
         targetPath: '$(System.ArtifactsDirectory)'
 
@@ -72,4 +72,4 @@ stages:
         kubernetesServiceConnection: 'Azure-kubernetes-connection'
         namespace: 'default'
         manifests: '$(System.ArtifactsDirectory)/springBootMongo2.yaml'
-        containers: 'jbabi/sbm:$(tag)'
+        containers: 'jbabi/azure-sbm:$(tag)'
