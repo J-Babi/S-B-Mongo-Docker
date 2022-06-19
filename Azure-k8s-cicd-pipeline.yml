@@ -63,7 +63,7 @@ stages:
       inputs:
         buildType: 'current'
         artifactName: 'springbootmongo'
-        itemPattern: '**/*yaml'
+        itemPattern: '**/*yml'
         targetPath: '$(System.ArtifactsDirectory)'
 
     - task: KubernetesManifest@0
