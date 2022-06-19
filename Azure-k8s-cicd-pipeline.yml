@@ -46,11 +46,11 @@ stages:
         Contents: '**/springbootmongo2.yaml'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-    - task: CopyFiles@2
-      inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory)'
-        Contents: '**/*.war'
-        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    # - task: CopyFiles@2
+    #   inputs:
+    #     SourceFolder: '$(System.DefaultWorkingDirectory)'
+    #     Contents: '**/*.war'
+    #     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - stage: Deploy
   displayName: Deploy image
@@ -64,7 +64,7 @@ stages:
       inputs:
         buildType: 'current'
         artifactName: 'springbootmongo'
-        itemPattern: '**/*.war'
+        itemPattern: '**/*.yaml'
         targetPath: '$(System.ArtifactsDirectory)'
 
     - task: KubernetesManifest@0
