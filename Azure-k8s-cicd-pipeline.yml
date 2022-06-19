@@ -42,13 +42,13 @@ stages:
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
-        Contents: '**/springbootmongo'
+        Contents: '**/sbm'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'springbootmongo'
+        ArtifactName: 'sbm'
         publishLocation: 'Container'
 
 - stage: Deploy
@@ -62,7 +62,7 @@ stages:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'springbootmongo'
+        artifactName: 'sbm'
         itemPattern: '**/*yml'
         targetPath: '$(System.ArtifactsDirectory)'
 
