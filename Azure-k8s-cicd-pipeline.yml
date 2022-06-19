@@ -36,8 +36,8 @@ stages:
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
-        Contents: '**/*yaml'
-        TargetFolder: '$(Build.ArtifactMainDirectory'
+        Contents: '**/springBootMongo.yml'
+        TargetFolder: '$(Build.ArtifactMainDirectory)'
 
     - task: CopyFiles@2
       inputs:
