@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: jbabi/azure-sbm
+        image: jbabi.azurecr.io/springbootmongo:486
         ports:
         - containerPort: 8080
         env:
