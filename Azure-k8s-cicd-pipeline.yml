@@ -43,7 +43,7 @@ stages:
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/*war'
-        TargetFolder: '$(Build.ArtifactMainDirectory'
+        TargetFolder: '$(Build.ArtifactMainDirectory)'
 
     - task: PublishBuildArtifacts@1
       inputs:
