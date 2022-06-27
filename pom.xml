@@ -94,12 +94,12 @@
             <repository>
 	      <id>deployment</id>
 	      <name>J-Babi Release Nexus Repository</name>
-	      <url>http://3.14.1.209:8081/repository/sbm4-releases/</url>
+	      <url>http://3.14.1.209:8081/repository/sbm3-releases/</url>
             </repository> 
 	    <snapshotRepository>
 	      <id>deployment</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
-	      <url>http://3.14.1.209:8081/repository/sbm4-snapshots/</url>
+	      <url>http://3.14.1.209:8081/repository/sbm3-snapshots/</url>
             </snapshotRepository>
 			
         </distributionManagement>
